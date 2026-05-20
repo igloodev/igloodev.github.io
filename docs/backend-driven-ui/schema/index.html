@@ -1,0 +1,2938 @@
+<!DOCTYPE html><html lang="en" class="no-js"> <head><meta charset="utf-8"><!-- Remove no-js class synchronously before first paint --><script type="module">document.documentElement.classList.remove("no-js");</script><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v6.1.5"><meta name="description" content="Complete reference for all 65 built-in widget types supported by Backend-Driven UI."><link rel="canonical" href="https://igloodev.in/docs/backend-driven-ui/schema/"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:url" content="https://igloodev.in/docs/backend-driven-ui/schema/"><meta property="og:title" content="Schema Reference — backend_driven_ui"><meta property="og:description" content="Complete reference for all 65 built-in widget types supported by Backend-Driven UI."><meta property="og:site_name" content="igloodev"><!-- Twitter Card --><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Schema Reference — backend_driven_ui"><meta name="twitter:description" content="Complete reference for all 65 built-in widget types supported by Backend-Driven UI."><title>Schema Reference — backend_driven_ui</title><link rel="stylesheet" href="/_astro/BaseLayout.NozlAo-S.css"></head> <body> <!-- Animated background blobs --> <div class="blobs" aria-hidden="true"> <div class="blob blob-1"></div> <div class="blob blob-2"></div> <div class="blob blob-3"></div> </div> <!-- Navigation --> <nav> <a href="/" class="nav-brand">igloodev</a> <ul class="nav-links"> <li><a href="/#packages">Packages</a></li> <li><a href="/docs">Docs</a></li> <li><a href="https://github.com/igloodev" target="_blank" rel="noopener">GitHub</a></li> </ul> </nav> <main>  <div class="doc-page"> <!-- Sidebar --> <aside class="doc-sidebar"> <div class="doc-sidebar-inner"> <div class="doc-breadcrumb"> <a href="/docs">Docs</a> <span>/</span> <a href="/docs/backend-driven-ui">backend_driven_ui</a> </div> <p class="doc-toc-label">On this page</p> <nav class="doc-toc"> <a href="#table-of-contents" class="doc-toc-link depth-2"> Table of Contents </a><a href="#schema-structure" class="doc-toc-link depth-2"> Schema Structure </a><a href="#scaffold-widgets" class="doc-toc-link depth-2"> Scaffold Widgets </a><a href="#scaffold" class="doc-toc-link depth-3"> Scaffold </a><a href="#appbar" class="doc-toc-link depth-3"> AppBar </a><a href="#safearea" class="doc-toc-link depth-3"> SafeArea </a><a href="#layout-widgets" class="doc-toc-link depth-2"> Layout Widgets </a><a href="#column" class="doc-toc-link depth-3"> Column </a><a href="#row" class="doc-toc-link depth-3"> Row </a><a href="#stack" class="doc-toc-link depth-3"> Stack </a><a href="#positioned" class="doc-toc-link depth-3"> Positioned </a><a href="#center" class="doc-toc-link depth-3"> Center </a><a href="#padding" class="doc-toc-link depth-3"> Padding </a><a href="#sizedbox" class="doc-toc-link depth-3"> SizedBox </a><a href="#container" class="doc-toc-link depth-3"> Container </a><a href="#expanded" class="doc-toc-link depth-3"> Expanded </a><a href="#flexible" class="doc-toc-link depth-3"> Flexible </a><a href="#wrap" class="doc-toc-link depth-3"> Wrap </a><a href="#spacer" class="doc-toc-link depth-3"> Spacer </a><a href="#aspectratio" class="doc-toc-link depth-3"> AspectRatio </a><a href="#display-widgets" class="doc-toc-link depth-2"> Display Widgets </a><a href="#text" class="doc-toc-link depth-3"> Text </a><a href="#icon" class="doc-toc-link depth-3"> Icon </a><a href="#image" class="doc-toc-link depth-3"> Image </a><a href="#divider" class="doc-toc-link depth-3"> Divider </a><a href="#circularprogressindicator" class="doc-toc-link depth-3"> CircularProgressIndicator </a><a href="#linearprogressindicator" class="doc-toc-link depth-3"> LinearProgressIndicator </a><a href="#material-widgets" class="doc-toc-link depth-2"> Material Widgets </a><a href="#card" class="doc-toc-link depth-3"> Card </a><a href="#listtile" class="doc-toc-link depth-3"> ListTile </a><a href="#circleavatar" class="doc-toc-link depth-3"> CircleAvatar </a><a href="#chip" class="doc-toc-link depth-3"> Chip </a><a href="#cliprrect" class="doc-toc-link depth-3"> ClipRRect </a><a href="#floatingactionbutton" class="doc-toc-link depth-3"> FloatingActionButton </a><a href="#expansiontile" class="doc-toc-link depth-3"> ExpansionTile </a><a href="#interactive-widgets" class="doc-toc-link depth-2"> Interactive Widgets </a><a href="#button--elevatedbutton" class="doc-toc-link depth-3"> Button / ElevatedButton </a><a href="#textbutton" class="doc-toc-link depth-3"> TextButton </a><a href="#outlinedbutton" class="doc-toc-link depth-3"> OutlinedButton </a><a href="#iconbutton" class="doc-toc-link depth-3"> IconButton </a><a href="#gesturedetector" class="doc-toc-link depth-3"> GestureDetector </a><a href="#inkwell" class="doc-toc-link depth-3"> InkWell </a><a href="#input-widgets" class="doc-toc-link depth-2"> Input Widgets </a><a href="#textfield" class="doc-toc-link depth-3"> TextField </a><a href="#textformfield" class="doc-toc-link depth-3"> TextFormField </a><a href="#switch" class="doc-toc-link depth-3"> Switch </a><a href="#checkbox" class="doc-toc-link depth-3"> Checkbox </a><a href="#scrollable-widgets" class="doc-toc-link depth-2"> Scrollable Widgets </a><a href="#listview" class="doc-toc-link depth-3"> ListView </a><a href="#gridview" class="doc-toc-link depth-3"> GridView </a><a href="#singlechildscrollview" class="doc-toc-link depth-3"> SingleChildScrollView </a><a href="#sliver-widgets" class="doc-toc-link depth-2"> Sliver Widgets </a><a href="#customscrollview" class="doc-toc-link depth-3"> CustomScrollView </a><a href="#sliverappbar" class="doc-toc-link depth-3"> SliverAppBar </a><a href="#sliverlist" class="doc-toc-link depth-3"> SliverList </a><a href="#slivergrid" class="doc-toc-link depth-3"> SliverGrid </a><a href="#slivertoboxadapter" class="doc-toc-link depth-3"> SliverToBoxAdapter </a><a href="#sliverpadding" class="doc-toc-link depth-3"> SliverPadding </a><a href="#sliverfillremaining" class="doc-toc-link depth-3"> SliverFillRemaining </a><a href="#sliverfixedextentlist" class="doc-toc-link depth-3"> SliverFixedExtentList </a><a href="#navigation-widgets" class="doc-toc-link depth-2"> Navigation Widgets </a><a href="#bottomnavigationbar" class="doc-toc-link depth-3"> BottomNavigationBar </a><a href="#navigationbar" class="doc-toc-link depth-3"> NavigationBar </a><a href="#defaulttabcontroller" class="doc-toc-link depth-3"> DefaultTabController </a><a href="#tabbar" class="doc-toc-link depth-3"> TabBar </a><a href="#tabbarview" class="doc-toc-link depth-3"> TabBarView </a><a href="#effect-widgets" class="doc-toc-link depth-2"> Effect Widgets </a><a href="#visibility" class="doc-toc-link depth-3"> Visibility </a><a href="#opacity" class="doc-toc-link depth-3"> Opacity </a><a href="#actions" class="doc-toc-link depth-2"> Actions </a><a href="#navigate" class="doc-toc-link depth-3"> Navigate </a><a href="#pop" class="doc-toc-link depth-3"> Pop </a><a href="#api-call" class="doc-toc-link depth-3"> API Call </a><a href="#show-dialog" class="doc-toc-link depth-3"> Show Dialog </a><a href="#show-snackbar" class="doc-toc-link depth-3"> Show SnackBar </a><a href="#sequence" class="doc-toc-link depth-3"> Sequence </a><a href="#conditional" class="doc-toc-link depth-3"> Conditional </a><a href="#copy" class="doc-toc-link depth-3"> Copy </a><a href="#custom" class="doc-toc-link depth-3"> Custom </a><a href="#conditions" class="doc-toc-link depth-2"> Conditions </a><a href="#color-formats" class="doc-toc-link depth-2"> Color Formats </a><a href="#best-practices" class="doc-toc-link depth-2"> Best Practices </a> </nav> </div> </aside> <!-- Content --> <article class="doc-content"> <div class="doc-content-inner"> <h1 id="json-schema-reference">JSON Schema Reference</h1>
+<p>Complete reference for all 65 built-in widget types supported by Backend-Driven UI.</p>
+<hr>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#schema-structure">Schema Structure</a></li>
+<li><a href="#scaffold-widgets">Scaffold Widgets</a></li>
+<li><a href="#layout-widgets">Layout Widgets</a></li>
+<li><a href="#display-widgets">Display Widgets</a></li>
+<li><a href="#material-widgets">Material Widgets</a></li>
+<li><a href="#interactive-widgets">Interactive Widgets</a></li>
+<li><a href="#input-widgets">Input Widgets</a></li>
+<li><a href="#scrollable-widgets">Scrollable Widgets</a></li>
+<li><a href="#sliver-widgets">Sliver Widgets</a></li>
+<li><a href="#navigation-widgets">Navigation Widgets</a></li>
+<li><a href="#effect-widgets">Effect Widgets</a></li>
+<li><a href="#actions">Actions</a></li>
+<li><a href="#conditions">Conditions</a></li>
+</ul>
+<hr>
+<h2 id="schema-structure">Schema Structure</h2>
+<p>Every widget follows this basic structure:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"WidgetName"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "property1"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"value1"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "property2"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"value2"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: { },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [ ],</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: { },</span></span>
+<span class="line"><span style="color:#79B8FF">  "condition"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"conditionName"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>type</code></td><td>String</td><td><strong>Required.</strong> Widget type name</td></tr><tr><td><code>props</code></td><td>Object</td><td>Widget properties</td></tr><tr><td><code>child</code></td><td>Object</td><td>Single child widget</td></tr><tr><td><code>children</code></td><td>Array</td><td>List of child widgets</td></tr><tr><td><code>action</code></td><td>Object</td><td>Action to execute (e.g., on tap)</td></tr><tr><td><code>condition</code></td><td>String</td><td>Conditional rendering</td></tr></tbody></table>
+<hr>
+<h2 id="scaffold-widgets">Scaffold Widgets</h2>
+<h3 id="scaffold">Scaffold</h3>
+<p>Top-level screen structure.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Scaffold"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "resizeToAvoidBottomInset"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "extendBody"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "extendBodyBehindAppBar"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "floatingActionButtonLocation"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"endFloat"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "appBar"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"AppBar"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"My Screen"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#79B8FF">    "floatingActionButton"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"FloatingActionButton"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"add"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#79B8FF">    "bottomNavigationBar"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"BottomNavigationBar"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"children"</span><span style="color:#E1E4E8">: [] },</span></span>
+<span class="line"><span style="color:#79B8FF">    "drawer"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Column"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"children"</span><span style="color:#E1E4E8">: [] }</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Column"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"children"</span><span style="color:#E1E4E8">: [] }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Scaffold background color</td></tr><tr><td><code>resizeToAvoidBottomInset</code></td><td>Boolean</td><td>Resize body when keyboard appears (default <code>true</code>)</td></tr><tr><td><code>extendBody</code></td><td>Boolean</td><td>Extend body behind bottom navigation bar (default <code>false</code>)</td></tr><tr><td><code>extendBodyBehindAppBar</code></td><td>Boolean</td><td>Extend body behind app bar (default <code>false</code>)</td></tr><tr><td><code>floatingActionButtonLocation</code></td><td>String</td><td><code>centerFloat</code>, <code>endFloat</code>, <code>centerDocked</code>, <code>endDocked</code>, <code>centerTop</code>, <code>endTop</code>, <code>miniCenterFloat</code>, <code>miniEndFloat</code>, <code>miniCenterDocked</code>, <code>miniEndDocked</code></td></tr><tr><td><code>appBar</code></td><td>Widget schema</td><td>AppBar widget rendered as <code>PreferredSizeWidget</code></td></tr><tr><td><code>floatingActionButton</code></td><td>Widget schema</td><td>FAB widget</td></tr><tr><td><code>bottomNavigationBar</code></td><td>Widget schema</td><td>Bottom navigation widget</td></tr><tr><td><code>drawer</code></td><td>Widget schema</td><td>Left drawer widget</td></tr><tr><td><code>endDrawer</code></td><td>Widget schema</td><td>Right drawer widget</td></tr><tr><td><code>bottomSheet</code></td><td>Widget schema</td><td>Persistent bottom sheet widget</td></tr></tbody></table>
+<p><code>child</code> — the body widget.</p>
+<hr>
+<h3 id="appbar">AppBar</h3>
+<p>Material design app bar for use inside <code>Scaffold</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"AppBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"My Screen"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "centerTitle"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "foregroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "automaticallyImplyLeading"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "leading"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"IconButton"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"menu"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#79B8FF">    "bottom"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TabBar"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"children"</span><span style="color:#E1E4E8">: [] }</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>String</td><td>App bar title text</td></tr><tr><td><code>centerTitle</code></td><td>Boolean</td><td>Center the title</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>App bar background color</td></tr><tr><td><code>foregroundColor</code></td><td>String/Number</td><td>Icon and text color</td></tr><tr><td><code>shadowColor</code></td><td>String/Number</td><td>Shadow color</td></tr><tr><td><code>surfaceTintColor</code></td><td>String/Number</td><td>Surface tint color</td></tr><tr><td><code>elevation</code></td><td>Number</td><td>Shadow depth</td></tr><tr><td><code>scrolledUnderElevation</code></td><td>Number</td><td>Elevation when content scrolls under</td></tr><tr><td><code>toolbarHeight</code></td><td>Number</td><td>Custom height</td></tr><tr><td><code>leadingWidth</code></td><td>Number</td><td>Width of the leading widget area</td></tr><tr><td><code>titleSpacing</code></td><td>Number</td><td>Horizontal space around the title</td></tr><tr><td><code>automaticallyImplyLeading</code></td><td>Boolean</td><td>Show back button automatically (default <code>true</code>)</td></tr><tr><td><code>leading</code></td><td>Widget schema</td><td>Leading widget (back button area)</td></tr><tr><td><code>flexibleSpace</code></td><td>Widget schema</td><td>Widget behind the toolbar</td></tr><tr><td><code>bottom</code></td><td>Widget schema</td><td>Must be a <code>PreferredSizeWidget</code> (e.g. <code>TabBar</code>)</td></tr></tbody></table>
+<p><code>children</code> — rendered as <code>actions</code> (right-side icon buttons).</p>
+<hr>
+<h3 id="safearea">SafeArea</h3>
+<p>Insets its child to avoid OS intrusions (notch, home bar, status bar).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SafeArea"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "top"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "bottom"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "left"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "right"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "minimum"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>top</code></td><td>Boolean</td><td>Avoid top intrusion (default <code>true</code>)</td></tr><tr><td><code>bottom</code></td><td>Boolean</td><td>Avoid bottom intrusion (default <code>true</code>)</td></tr><tr><td><code>left</code></td><td>Boolean</td><td>Avoid left intrusion (default <code>true</code>)</td></tr><tr><td><code>right</code></td><td>Boolean</td><td>Avoid right intrusion (default <code>true</code>)</td></tr><tr><td><code>minimum</code></td><td>Number/Object</td><td>Minimum inset padding</td></tr></tbody></table>
+<hr>
+<h2 id="layout-widgets">Layout Widgets</h2>
+<h3 id="column">Column</h3>
+<p>Vertical layout.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Column"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "mainAxisAlignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "crossAxisAlignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"start"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "mainAxisSize"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"max"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "clipBehavior"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"none"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>mainAxisAlignment</code></td><td>String</td><td><code>start</code>, <code>end</code>, <code>center</code>, <code>spaceBetween</code>, <code>spaceAround</code>, <code>spaceEvenly</code></td></tr><tr><td><code>crossAxisAlignment</code></td><td>String</td><td><code>start</code>, <code>end</code>, <code>center</code>, <code>stretch</code>, <code>baseline</code></td></tr><tr><td><code>mainAxisSize</code></td><td>String</td><td><code>min</code>, <code>max</code></td></tr><tr><td><code>clipBehavior</code></td><td>String</td><td><code>none</code> (default), <code>hardEdge</code>, <code>antiAlias</code>, <code>antiAliasWithSaveLayer</code></td></tr></tbody></table>
+<hr>
+<h3 id="row">Row</h3>
+<p>Horizontal layout.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Row"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "mainAxisAlignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"spaceBetween"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "crossAxisAlignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "clipBehavior"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"none"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><em>Same properties as Column.</em></p>
+<hr>
+<h3 id="stack">Stack</h3>
+<p>Overlay widgets on top of each other.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Stack"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "alignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fit"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"loose"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "clipBehavior"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"hardEdge"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>alignment</code></td><td>String</td><td><code>topLeft</code>, <code>topCenter</code>, <code>topRight</code>, <code>centerLeft</code>, <code>center</code>, <code>centerRight</code>, <code>bottomLeft</code>, <code>bottomCenter</code>, <code>bottomRight</code></td></tr><tr><td><code>fit</code></td><td>String</td><td><code>loose</code>, <code>expand</code>, <code>passthrough</code></td></tr><tr><td><code>clipBehavior</code></td><td>String</td><td><code>hardEdge</code> (default), <code>none</code>, <code>antiAlias</code>, <code>antiAliasWithSaveLayer</code></td></tr></tbody></table>
+<hr>
+<h3 id="positioned">Positioned</h3>
+<p>Positions a child at a specific offset inside a <code>Stack</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Positioned"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "left"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "top"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "right"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "bottom"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">null</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>left</code></td><td>Number</td><td>Distance from left edge</td></tr><tr><td><code>top</code></td><td>Number</td><td>Distance from top edge</td></tr><tr><td><code>right</code></td><td>Number</td><td>Distance from right edge</td></tr><tr><td><code>bottom</code></td><td>Number</td><td>Distance from bottom edge</td></tr><tr><td><code>width</code></td><td>Number</td><td>Fixed width</td></tr><tr><td><code>height</code></td><td>Number</td><td>Fixed height</td></tr></tbody></table>
+<hr>
+<h3 id="center">Center</h3>
+<p>Center a child widget.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="padding">Padding</h3>
+<p>Add padding around a child.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Padding"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "paddingLeft"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "paddingRight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "paddingTop"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "paddingBottom"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">12</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "paddingHorizontal"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "paddingVertical"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>padding</code></td><td>Number</td><td>All sides</td></tr><tr><td><code>paddingLeft</code></td><td>Number</td><td>Left only</td></tr><tr><td><code>paddingRight</code></td><td>Number</td><td>Right only</td></tr><tr><td><code>paddingTop</code></td><td>Number</td><td>Top only</td></tr><tr><td><code>paddingBottom</code></td><td>Number</td><td>Bottom only</td></tr><tr><td><code>paddingHorizontal</code></td><td>Number</td><td>Left + Right</td></tr><tr><td><code>paddingVertical</code></td><td>Number</td><td>Top + Bottom</td></tr></tbody></table>
+<blockquote>
+<p><strong>Priority:</strong> <code>paddingLeft/Right/Top/Bottom</code> > <code>paddingHorizontal/paddingVertical</code> > <code>padding</code>.</p>
+</blockquote>
+<hr>
+<h3 id="sizedbox">SizedBox</h3>
+<p>Fixed size box or spacer.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SizedBox"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="container">Container</h3>
+<p>Box with styling (background, border, padding, gradient, shadow).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Container"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FF5733"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "margin"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "border"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#000000"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderWidth"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "alignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "clipBehavior"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"none"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>width</code></td><td>Number</td><td>Fixed width</td></tr><tr><td><code>height</code></td><td>Number</td><td>Fixed height</td></tr><tr><td><code>color</code></td><td>String/Number</td><td>Background color (ignored when <code>gradient</code> is set)</td></tr><tr><td><code>padding</code></td><td>Number/Object</td><td>Inner padding</td></tr><tr><td><code>margin</code></td><td>Number/Object</td><td>Outer margin</td></tr><tr><td><code>borderRadius</code></td><td>Number/Object</td><td>Corner radius</td></tr><tr><td><code>border</code></td><td>Boolean</td><td>Show border</td></tr><tr><td><code>borderColor</code></td><td>String/Number</td><td>Border color</td></tr><tr><td><code>borderWidth</code></td><td>Number</td><td>Border width</td></tr><tr><td><code>alignment</code></td><td>String</td><td>Child alignment (<code>topLeft</code>, <code>center</code>, <code>bottomRight</code>, etc.)</td></tr><tr><td><code>clipBehavior</code></td><td>String</td><td><code>none</code> (default), <code>hardEdge</code>, <code>antiAlias</code>, <code>antiAliasWithSaveLayer</code></td></tr><tr><td><code>gradient</code></td><td>Object</td><td>Gradient definition (see Gradient section)</td></tr><tr><td><code>boxShadow</code></td><td>Object/Array</td><td>Shadow(s)</td></tr><tr><td><code>backgroundImage</code></td><td>String</td><td>Network image URL for background</td></tr><tr><td><code>backgroundFit</code></td><td>String</td><td><code>fill</code>, <code>contain</code>, <code>cover</code>, <code>fitWidth</code>, <code>fitHeight</code>, <code>none</code>, <code>scaleDown</code></td></tr></tbody></table>
+<hr>
+<h3 id="expanded">Expanded</h3>
+<p>Expand child to fill available space inside <code>Row</code>/<code>Column</code>. Falls back to rendering the child directly if used outside a flex widget.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Expanded"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "flex"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>flex</code></td><td>Number</td><td>Flex factor (default: 1, clamped to 1–99999)</td></tr></tbody></table>
+<hr>
+<h3 id="flexible">Flexible</h3>
+<p>Flexible sizing within <code>Row</code>/<code>Column</code>. Falls back to rendering the child directly if used outside a flex widget.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Flexible"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "flex"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fit"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"loose"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>flex</code></td><td>Number</td><td>Flex factor (default: 1, clamped to 1–99999)</td></tr><tr><td><code>fit</code></td><td>String</td><td><code>tight</code>, <code>loose</code> (default: <code>tight</code>)</td></tr></tbody></table>
+<hr>
+<h3 id="wrap">Wrap</h3>
+<p>Wrap children to next line when space runs out.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Wrap"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "alignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"start"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "spacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "runSpacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>alignment</code></td><td>String</td><td><code>start</code>, <code>end</code>, <code>center</code>, <code>spaceBetween</code>, <code>spaceAround</code>, <code>spaceEvenly</code></td></tr><tr><td><code>spacing</code></td><td>Number</td><td>Space between children</td></tr><tr><td><code>runSpacing</code></td><td>Number</td><td>Space between lines</td></tr></tbody></table>
+<hr>
+<h3 id="spacer">Spacer</h3>
+<p>Flexible space in <code>Row</code>/<code>Column</code>. Falls back to <code>SizedBox.shrink()</code> if used outside a flex widget.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Spacer"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "flex"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="aspectratio">AspectRatio</h3>
+<p>Maintain aspect ratio.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"AspectRatio"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "ratio"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.78</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>ratio</code></td><td>Number</td><td>Width/height ratio. Clamped to 0.1–10; invalid values default to 1.0</td></tr></tbody></table>
+<hr>
+<h2 id="display-widgets">Display Widgets</h2>
+<h3 id="text">Text</h3>
+<p>Display text with styling.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Hello World"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fontSize"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fontWeight"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"bold"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fontStyle"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"italic"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#333333"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textAlign"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "maxLines"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "overflow"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ellipsis"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "letterSpacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "lineHeight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "decoration"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"underline"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>text</code></td><td>String</td><td><strong>Required.</strong> Text content</td></tr><tr><td><code>fontSize</code></td><td>Number</td><td>Font size in pixels</td></tr><tr><td><code>fontWeight</code></td><td>String</td><td><code>normal</code>, <code>bold</code>, <code>w100</code>–<code>w900</code></td></tr><tr><td><code>fontStyle</code></td><td>String</td><td><code>normal</code>, <code>italic</code></td></tr><tr><td><code>color</code></td><td>String/Number</td><td>Text color (hex, named, or integer)</td></tr><tr><td><code>textAlign</code></td><td>String</td><td><code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code>, <code>start</code>, <code>end</code></td></tr><tr><td><code>maxLines</code></td><td>Number</td><td>Maximum lines</td></tr><tr><td><code>overflow</code></td><td>String</td><td><code>clip</code>, <code>fade</code>, <code>ellipsis</code>, <code>visible</code></td></tr><tr><td><code>decoration</code></td><td>String</td><td><code>none</code>, <code>underline</code>, <code>overline</code>, <code>lineThrough</code></td></tr></tbody></table>
+<hr>
+<h3 id="icon">Icon</h3>
+<p>Material icon.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Icon"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"favorite"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "size"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FF0000"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>icon</code></td><td>String</td><td>Material icon name (e.g., <code>home</code>, <code>settings</code>, <code>favorite</code>)</td></tr><tr><td><code>size</code></td><td>Number</td><td>Icon size</td></tr><tr><td><code>color</code></td><td>String/Number</td><td>Icon color (hex, named, or integer)</td></tr></tbody></table>
+<p><strong>Available icons:</strong> <code>home</code>, <code>settings</code>, <code>favorite</code>, <code>star</code>, <code>person</code>, <code>email</code>, <code>phone</code>, <code>message</code>, <code>camera</code>, <code>image</code>, <code>file</code>, <code>folder</code>, <code>download</code>, <code>upload</code>, <code>share</code>, <code>copy</code>, <code>delete</code>, <code>edit</code>, <code>add</code>, <code>remove</code>, <code>check</code>, <code>close</code>, <code>search</code>, <code>menu</code>, <code>arrow_back</code>, <code>arrow_forward</code>, <code>refresh</code>, <code>info</code>, <code>warning</code>, <code>error</code>, <code>help</code>, <code>lock</code>, <code>unlock</code>, <code>visibility</code>, <code>visibility_off</code></p>
+<hr>
+<h3 id="image">Image</h3>
+<p>Network image.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Image"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://example.com/image.jpg"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">150</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fit"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"cover"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>url</code></td><td>String</td><td><strong>Required.</strong> Image URL</td></tr><tr><td><code>width</code></td><td>Number</td><td>Image width</td></tr><tr><td><code>height</code></td><td>Number</td><td>Image height</td></tr><tr><td><code>fit</code></td><td>String</td><td><code>fill</code>, <code>contain</code>, <code>cover</code>, <code>fitWidth</code>, <code>fitHeight</code>, <code>none</code>, <code>scaleDown</code></td></tr><tr><td><code>borderRadius</code></td><td>Number</td><td>Corner radius</td></tr></tbody></table>
+<hr>
+<h3 id="divider">Divider</h3>
+<p>Horizontal line.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Divider"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "thickness"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#E0E0E0"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "indent"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "endIndent"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="circularprogressindicator">CircularProgressIndicator</h3>
+<p>Circular spinner.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"CircularProgressIndicator"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "value"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.7</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#E3F2FD"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "strokeWidth"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "strokeCap"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"round"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>value</code></td><td>Number</td><td>0.0–1.0 for determinate; omit for indeterminate spinner</td></tr><tr><td><code>color</code></td><td>String/Number</td><td>Progress arc color</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Track color</td></tr><tr><td><code>strokeWidth</code></td><td>Number</td><td>Arc stroke width (default <code>4.0</code>)</td></tr><tr><td><code>strokeCap</code></td><td>String</td><td><code>round</code>, <code>square</code>, <code>butt</code></td></tr></tbody></table>
+<hr>
+<h3 id="linearprogressindicator">LinearProgressIndicator</h3>
+<p>Horizontal progress bar.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"LinearProgressIndicator"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "value"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.5</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#E3F2FD"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "minHeight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>value</code></td><td>Number</td><td>0.0–1.0 for determinate; omit for indeterminate</td></tr><tr><td><code>color</code></td><td>String/Number</td><td>Progress bar color</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Track color</td></tr><tr><td><code>minHeight</code></td><td>Number</td><td>Bar height</td></tr><tr><td><code>borderRadius</code></td><td>Number</td><td>Rounded ends</td></tr></tbody></table>
+<hr>
+<h2 id="material-widgets">Material Widgets</h2>
+<h3 id="card">Card</h3>
+<p>Material card with elevation.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Card"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "margin"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="listtile">ListTile</h3>
+<p>Standard list item.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ListTile"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"List Item Title"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "subtitle"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Subtitle text"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "dense"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "enabled"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<blockquote>
+<p><code>leading</code> and <code>trailing</code> are passed as widget schemas inside <code>props['leading']</code> and <code>props['trailing']</code>.</p>
+</blockquote>
+<hr>
+<h3 id="circleavatar">CircleAvatar</h3>
+<p>Circular avatar.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"CircleAvatar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "imageUrl"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://example.com/avatar.jpg"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"AB"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "radius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>imageUrl</code></td><td>String</td><td>Avatar image URL</td></tr><tr><td><code>text</code></td><td>String</td><td>Fallback text (initials)</td></tr><tr><td><code>radius</code></td><td>Number</td><td>Avatar radius</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Background color</td></tr></tbody></table>
+<hr>
+<h3 id="chip">Chip</h3>
+<p>Tag/label chip.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Chip"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tag Name"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#E3F2FD"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "labelStyle"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#1976D2"</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#79B8FF">    "deleteIcon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"close"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "avatar"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"tag"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>label</code></td><td>String</td><td>Chip label text</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Background color</td></tr><tr><td><code>labelStyle</code></td><td>Object</td><td>Text style map</td></tr><tr><td><code>avatar</code></td><td>String</td><td>Icon name for the avatar slot</td></tr><tr><td><code>deleteIcon</code></td><td>String</td><td>Icon name for the delete slot</td></tr><tr><td><code>borderColor</code></td><td>String/Number</td><td>Outline color</td></tr><tr><td><code>borderWidth</code></td><td>Number</td><td>Outline width</td></tr></tbody></table>
+<hr>
+<h3 id="cliprrect">ClipRRect</h3>
+<p>Rounded corners clip.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ClipRRect"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "clipBehavior"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"antiAlias"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>borderRadius</code></td><td>Number</td><td>Uniform corner radius</td></tr><tr><td><code>clipBehavior</code></td><td>String</td><td><code>antiAlias</code> (default), <code>hardEdge</code>, <code>antiAliasWithSaveLayer</code>, <code>none</code></td></tr></tbody></table>
+<hr>
+<h3 id="floatingactionbutton">FloatingActionButton</h3>
+<p>Circular action button, typically placed in <code>Scaffold.floatingActionButton</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"FloatingActionButton"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"add"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"New Item"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "tooltip"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Create"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "foregroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">6</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "mini"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/create"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>icon</code></td><td>String</td><td>Icon name</td></tr><tr><td><code>label</code></td><td>String</td><td>Text label — switches to extended FAB when present</td></tr><tr><td><code>tooltip</code></td><td>String</td><td>Long-press tooltip</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Background color</td></tr><tr><td><code>foregroundColor</code></td><td>String/Number</td><td>Icon/text color</td></tr><tr><td><code>elevation</code></td><td>Number</td><td>Shadow depth</td></tr><tr><td><code>mini</code></td><td>Boolean</td><td>Smaller FAB variant (default <code>false</code>)</td></tr><tr><td><code>heroTag</code></td><td>String</td><td>Custom Hero tag; use <code>"null"</code> string to disable Hero animation</td></tr></tbody></table>
+<hr>
+<h3 id="expansiontile">ExpansionTile</h3>
+<p>Collapsible tile with children.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ExpansionTile"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Section Title"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "subtitle"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Optional subtitle"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "initiallyExpanded"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "maintainState"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#F5F5F5"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "collapsedBackgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "collapsedTextColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#333333"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "iconColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "collapsedIconColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#757575"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "tilePadding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "childrenPadding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "dense"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "expandedAlignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"center"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "leading"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Icon"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"folder"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#79B8FF">    "trailing"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Icon"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"arrow_forward"</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [],</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"custom"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"onExpansionChanged"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>String</td><td>Tile title text</td></tr><tr><td><code>subtitle</code></td><td>String</td><td>Subtitle below the title</td></tr><tr><td><code>initiallyExpanded</code></td><td>Boolean</td><td>Starts expanded (default <code>false</code>)</td></tr><tr><td><code>maintainState</code></td><td>Boolean</td><td>Keep children alive when collapsed (default <code>false</code>)</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Background when expanded</td></tr><tr><td><code>collapsedBackgroundColor</code></td><td>String/Number</td><td>Background when collapsed</td></tr><tr><td><code>textColor</code></td><td>String/Number</td><td>Title/subtitle color when expanded</td></tr><tr><td><code>collapsedTextColor</code></td><td>String/Number</td><td>Title/subtitle color when collapsed</td></tr><tr><td><code>iconColor</code></td><td>String/Number</td><td>Arrow icon color when expanded</td></tr><tr><td><code>collapsedIconColor</code></td><td>String/Number</td><td>Arrow icon color when collapsed</td></tr><tr><td><code>tilePadding</code></td><td>Number/Object</td><td>Padding inside the tile header</td></tr><tr><td><code>childrenPadding</code></td><td>Number/Object</td><td>Padding around the expanded children</td></tr><tr><td><code>dense</code></td><td>Boolean</td><td>Reduce vertical padding (default <code>false</code>)</td></tr><tr><td><code>enableFeedback</code></td><td>Boolean</td><td>Enable haptic/audio feedback</td></tr><tr><td><code>expandedAlignment</code></td><td>String</td><td>Alignment of children when expanded (<code>topLeft</code>, <code>center</code>, etc.)</td></tr><tr><td><code>leading</code></td><td>Widget schema</td><td>Widget before the title (passed inside <code>props</code>)</td></tr><tr><td><code>trailing</code></td><td>Widget schema</td><td>Widget after the title (passed inside <code>props</code>)</td></tr></tbody></table>
+<p><code>action</code> — fired on expand/collapse.</p>
+<hr>
+<h2 id="interactive-widgets">Interactive Widgets</h2>
+<h3 id="button--elevatedbutton">Button / ElevatedButton</h3>
+<p>Elevated button with action.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ElevatedButton"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Click Me"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "disabled"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/details"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="textbutton">TextButton</h3>
+<p>Flat text button.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TextButton"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Learn More"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="outlinedbutton">OutlinedButton</h3>
+<p>Outlined button.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"OutlinedButton"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Cancel"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#757575"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#757575"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="iconbutton">IconButton</h3>
+<p>Icon button.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"IconButton"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"favorite"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "size"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">24</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FF0000"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="gesturedetector">GestureDetector</h3>
+<p>Tap detection wrapper.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"GestureDetector"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/details"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="inkwell">InkWell</h3>
+<p>Tap with ripple effect.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"InkWell"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "splashColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {},</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="input-widgets">Input Widgets</h2>
+<h3 id="textfield">TextField</h3>
+<p>Single or multi-line text input.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TextField"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "value"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Initial text"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "hint"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Enter your name"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Name"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "helperText"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"We will never share your name"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "filled"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fillColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#F5F5F5"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderRadius"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "obscureText"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "enabled"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "readOnly"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "maxLines"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "minLines"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "maxLength"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "keyboardType"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"text"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textInputAction"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"done"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textCapitalization"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"sentences"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "textAlign"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"left"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "cursorColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "autocorrect"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"custom"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"onSubmit"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values / Description</th></tr></thead><tbody><tr><td><code>value</code></td><td>String</td><td>Initial text</td></tr><tr><td><code>hint</code></td><td>String</td><td>Placeholder text</td></tr><tr><td><code>label</code></td><td>String</td><td>Floating label</td></tr><tr><td><code>helperText</code></td><td>String</td><td>Helper text below the field</td></tr><tr><td><code>errorText</code></td><td>String</td><td>Error text below the field</td></tr><tr><td><code>prefixText</code></td><td>String</td><td>Text prefix inside the field</td></tr><tr><td><code>suffixText</code></td><td>String</td><td>Text suffix inside the field</td></tr><tr><td><code>prefixIcon</code></td><td>String</td><td>Icon name for prefix</td></tr><tr><td><code>suffixIcon</code></td><td>String</td><td>Icon name for suffix</td></tr><tr><td><code>filled</code></td><td>Boolean</td><td>Fill background (default <code>false</code>)</td></tr><tr><td><code>fillColor</code></td><td>String/Number</td><td>Fill color</td></tr><tr><td><code>borderRadius</code></td><td>Number</td><td>Corner radius</td></tr><tr><td><code>obscureText</code></td><td>Boolean</td><td>Hide text (password mode, default <code>false</code>)</td></tr><tr><td><code>enabled</code></td><td>Boolean</td><td>Enable/disable input (default <code>true</code>)</td></tr><tr><td><code>readOnly</code></td><td>Boolean</td><td>Read-only mode (default <code>false</code>)</td></tr><tr><td><code>maxLines</code></td><td>Number</td><td>Maximum lines (default <code>1</code>; <code>null</code> = unlimited for multiline)</td></tr><tr><td><code>minLines</code></td><td>Number</td><td>Minimum lines</td></tr><tr><td><code>maxLength</code></td><td>Number</td><td>Character limit</td></tr><tr><td><code>keyboardType</code></td><td>String</td><td><code>text</code>, <code>number</code>, <code>email</code>, <code>phone</code>, <code>multiline</code>, <code>url</code>, <code>visiblePassword</code></td></tr><tr><td><code>textInputAction</code></td><td>String</td><td><code>done</code>, <code>next</code>, <code>search</code>, <code>send</code>, <code>go</code>, <code>newline</code></td></tr><tr><td><code>textCapitalization</code></td><td>String</td><td><code>none</code>, <code>words</code>, <code>sentences</code>, <code>characters</code></td></tr><tr><td><code>textAlign</code></td><td>String</td><td><code>left</code>, <code>center</code>, <code>right</code>, <code>justify</code></td></tr><tr><td><code>cursorColor</code></td><td>String/Number</td><td>Cursor color</td></tr><tr><td><code>cursorWidth</code></td><td>Number</td><td>Cursor width (default <code>2.0</code>)</td></tr><tr><td><code>autocorrect</code></td><td>Boolean</td><td>Enable autocorrect (default <code>true</code>)</td></tr><tr><td><code>enableSuggestions</code></td><td>Boolean</td><td>Enable suggestions (default <code>true</code>)</td></tr><tr><td><code>onChanged</code></td><td>Object</td><td>Action map fired on every keystroke</td></tr><tr><td><code>style</code></td><td>Object</td><td>Text style map</td></tr></tbody></table>
+<p><code>action</code> — fired when the keyboard action key is pressed (submit).</p>
+<hr>
+<h3 id="textformfield">TextFormField</h3>
+<p>Like <code>TextField</code> but integrates with <code>Form</code> / <code>FormState</code> for validation.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TextFormField"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "hint"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Email address"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Email"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "keyboardType"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"email"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "validators"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"required"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"email"</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Supports all <code>TextField</code> props, plus:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>validators</code></td><td>Array</td><td>Validation rules applied in order</td></tr></tbody></table>
+<p><strong>Built-in validators:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Rule</th><th>Description</th></tr></thead><tbody><tr><td><code>"required"</code></td><td>Field must not be empty</td></tr><tr><td><code>"email"</code></td><td>Must be a valid email address</td></tr><tr><td><code>"numeric"</code></td><td>Must be a valid number</td></tr><tr><td><code>"minLength:N"</code></td><td>Minimum N characters (e.g. <code>"minLength:8"</code>)</td></tr><tr><td><code>"maxLength:N"</code></td><td>Maximum N characters</td></tr></tbody></table>
+<hr>
+<h3 id="switch">Switch</h3>
+<p>Toggle between on/off states.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Switch"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "value"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "activeColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "activeTrackColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#BBDEFB"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "inactiveThumbColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#BDBDBD"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "inactiveTrackColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#E0E0E0"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"custom"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"onToggle"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>value</code></td><td>Boolean</td><td>Initial state (default <code>false</code>)</td></tr><tr><td><code>activeColor</code></td><td>String/Number</td><td>Thumb color when on</td></tr><tr><td><code>activeTrackColor</code></td><td>String/Number</td><td>Track color when on</td></tr><tr><td><code>inactiveThumbColor</code></td><td>String/Number</td><td>Thumb color when off</td></tr><tr><td><code>inactiveTrackColor</code></td><td>String/Number</td><td>Track color when off</td></tr></tbody></table>
+<p><code>action</code> — fired on every toggle.</p>
+<hr>
+<h3 id="checkbox">Checkbox</h3>
+<p>Tick box for boolean selection.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Checkbox"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "value"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "tristate"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "activeColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "checkColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fillColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#BDBDBD"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "borderWidth"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "visualDensity"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"standard"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"custom"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"onCheck"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>value</code></td><td>Boolean</td><td>Initial state (default <code>false</code>)</td></tr><tr><td><code>tristate</code></td><td>Boolean</td><td>Allow <code>null</code> intermediate state (default <code>false</code>)</td></tr><tr><td><code>activeColor</code></td><td>String/Number</td><td>Fill color when checked</td></tr><tr><td><code>checkColor</code></td><td>String/Number</td><td>Check mark color</td></tr><tr><td><code>fillColor</code></td><td>String/Number</td><td>Fill color (overrides <code>activeColor</code> via <code>WidgetStateProperty</code>)</td></tr><tr><td><code>borderColor</code></td><td>String/Number</td><td>Outline color when unchecked</td></tr><tr><td><code>borderWidth</code></td><td>Number</td><td>Outline width (default <code>2.0</code>)</td></tr><tr><td><code>visualDensity</code></td><td>String</td><td><code>compact</code>, <code>comfortable</code>, <code>standard</code></td></tr></tbody></table>
+<p><code>action</code> — fired on every toggle.</p>
+<hr>
+<h2 id="scrollable-widgets">Scrollable Widgets</h2>
+<h3 id="listview">ListView</h3>
+<p>Scrollable list (lazy loading).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ListView"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "scrollDirection"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"vertical"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "shrinkWrap"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "physics"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"bouncing"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "separator"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "separatorHeight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>scrollDirection</code></td><td>String</td><td><code>vertical</code>, <code>horizontal</code></td></tr><tr><td><code>padding</code></td><td>Number</td><td>List padding</td></tr><tr><td><code>shrinkWrap</code></td><td>Boolean</td><td>Shrink to content size</td></tr><tr><td><code>physics</code></td><td>String</td><td><code>bouncing</code>, <code>clamping</code>, <code>never</code>, <code>always</code></td></tr><tr><td><code>separator</code></td><td>Boolean</td><td>Show dividers between items</td></tr></tbody></table>
+<p><strong>Variants:</strong> <code>ListView</code>, <code>ListView.builder</code>, <code>ListView.separated</code>, <code>ListView.custom</code> — all accept the same props.</p>
+<hr>
+<h3 id="gridview">GridView</h3>
+<p>Scrollable grid.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"GridView"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "crossAxisCount"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "mainAxisSpacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "crossAxisSpacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "childAspectRatio"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "shrinkWrap"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>crossAxisCount</code></td><td>Number</td><td>Columns count (clamped to 1+)</td></tr><tr><td><code>mainAxisSpacing</code></td><td>Number</td><td>Vertical spacing</td></tr><tr><td><code>crossAxisSpacing</code></td><td>Number</td><td>Horizontal spacing</td></tr><tr><td><code>childAspectRatio</code></td><td>Number</td><td>Width/height ratio (clamped to 0.01+)</td></tr></tbody></table>
+<p><strong>Variants:</strong> <code>GridView</code>, <code>GridView.builder</code>, <code>GridView.count</code>, <code>GridView.extent</code>, <code>GridView.custom</code>.</p>
+<p>Use <code>GridView.extent</code> with <code>maxCrossAxisExtent</code> instead of <code>crossAxisCount</code> for responsive grids.</p>
+<hr>
+<h3 id="singlechildscrollview">SingleChildScrollView</h3>
+<p>Scrollable content.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SingleChildScrollView"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "scrollDirection"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"vertical"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "physics"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"bouncing"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="sliver-widgets">Sliver Widgets</h2>
+<p>Sliver widgets must be used inside <code>CustomScrollView</code>.</p>
+<h3 id="customscrollview">CustomScrollView</h3>
+<p>Scrollable area composed of slivers.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"CustomScrollView"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "scrollDirection"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"vertical"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "reverse"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "shrinkWrap"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "physics"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"bouncing"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverAppBar"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"My App"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverList"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"children"</span><span style="color:#E1E4E8">: [] }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>scrollDirection</code></td><td>String</td><td><code>vertical</code> (default), <code>horizontal</code></td></tr><tr><td><code>reverse</code></td><td>Boolean</td><td>Reverse scroll direction (default <code>false</code>)</td></tr><tr><td><code>shrinkWrap</code></td><td>Boolean</td><td>Shrink to content size (default <code>false</code>)</td></tr><tr><td><code>physics</code></td><td>String</td><td><code>bouncing</code>, <code>clamping</code>, <code>never</code></td></tr></tbody></table>
+<p><code>children</code> — must be sliver widgets.</p>
+<hr>
+<h3 id="sliverappbar">SliverAppBar</h3>
+<p>Collapsible app bar for use inside <code>CustomScrollView</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverAppBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"My Screen"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "expandedHeight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">200</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "floating"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "pinned"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "snap"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "centerTitle"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "foregroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Image"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://..."</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code></td><td>String</td><td>App bar title</td></tr><tr><td><code>expandedHeight</code></td><td>Number</td><td>Height when fully expanded</td></tr><tr><td><code>floating</code></td><td>Boolean</td><td>Appear on scroll up (default <code>false</code>)</td></tr><tr><td><code>pinned</code></td><td>Boolean</td><td>Stay visible when collapsed (default <code>false</code>)</td></tr><tr><td><code>snap</code></td><td>Boolean</td><td>Snap fully visible on partial scroll (requires <code>floating: true</code>)</td></tr><tr><td><code>centerTitle</code></td><td>Boolean</td><td>Center the title</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Background color</td></tr><tr><td><code>foregroundColor</code></td><td>String/Number</td><td>Text/icon color</td></tr><tr><td><code>elevation</code></td><td>Number</td><td>Shadow depth</td></tr></tbody></table>
+<p><code>child</code> — rendered as <code>FlexibleSpaceBar.background</code> (visible in expanded state).</p>
+<hr>
+<h3 id="sliverlist">SliverList</h3>
+<p>Scrollable list inside <code>CustomScrollView</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverList"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ListTile"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Item 1"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ListTile"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Item 2"</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<blockquote>
+<p>Add <code>"id"</code> to a child’s <code>props</code> to use a stable key for that item.</p>
+</blockquote>
+<hr>
+<h3 id="slivergrid">SliverGrid</h3>
+<p>Scrollable grid inside <code>CustomScrollView</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverGrid"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "crossAxisCount"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "mainAxisSpacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "crossAxisSpacing"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "childAspectRatio"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1.0</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>crossAxisCount</code></td><td>Number</td><td>Fixed columns (clamped to 1+)</td></tr><tr><td><code>maxCrossAxisExtent</code></td><td>Number</td><td>Max item width for responsive layout (alternative to <code>crossAxisCount</code>)</td></tr><tr><td><code>mainAxisSpacing</code></td><td>Number</td><td>Vertical spacing</td></tr><tr><td><code>crossAxisSpacing</code></td><td>Number</td><td>Horizontal spacing</td></tr><tr><td><code>childAspectRatio</code></td><td>Number</td><td>Width/height ratio (clamped to 0.01+)</td></tr></tbody></table>
+<hr>
+<h3 id="slivertoboxadapter">SliverToBoxAdapter</h3>
+<p>Wraps a regular (box) widget inside a sliver.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverToBoxAdapter"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Header"</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="sliverpadding">SliverPadding</h3>
+<p>Adds padding around another sliver.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverPadding"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "padding"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">16</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverList"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"children"</span><span style="color:#E1E4E8">: [] }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="sliverfillremaining">SliverFillRemaining</h3>
+<p>Fills the remaining space in the viewport.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverFillRemaining"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "hasScrollBody"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "fillOverscroll"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>hasScrollBody</code></td><td>Boolean</td><td>Child is scrollable (default <code>false</code>)</td></tr><tr><td><code>fillOverscroll</code></td><td>Boolean</td><td>Extend fill into overscroll area (default <code>false</code>)</td></tr></tbody></table>
+<hr>
+<h3 id="sliverfixedextentlist">SliverFixedExtentList</h3>
+<p>List where every item has the same height (more efficient than <code>SliverList</code> for uniform items).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"SliverFixedExtentList"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "itemExtent"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">72</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>itemExtent</code></td><td>Number</td><td>Fixed height per item (default <code>56</code>, clamped to 0.1+)</td></tr></tbody></table>
+<hr>
+<h2 id="navigation-widgets">Navigation Widgets</h2>
+<h3 id="bottomnavigationbar">BottomNavigationBar</h3>
+<p>Classic bottom tab bar. Requires at least 2 items.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"BottomNavigationBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "currentIndex"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"fixed"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "selectedItemColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "unselectedItemColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#757575"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "showSelectedLabels"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "showUnselectedLabels"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#79B8FF">      "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Item"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"home"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Home"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"activeIcon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"home"</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#79B8FF">      "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/home"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#79B8FF">      "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Item"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"search"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Search"</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#79B8FF">      "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/search"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>Bar props:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>currentIndex</code></td><td>Number</td><td>Initially selected tab index (default <code>0</code>)</td></tr><tr><td><code>type</code></td><td>String</td><td><code>fixed</code> (default), <code>shifting</code></td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Bar background color</td></tr><tr><td><code>selectedItemColor</code></td><td>String/Number</td><td>Selected item color</td></tr><tr><td><code>unselectedItemColor</code></td><td>String/Number</td><td>Unselected item color</td></tr><tr><td><code>elevation</code></td><td>Number</td><td>Shadow depth</td></tr><tr><td><code>iconSize</code></td><td>Number</td><td>Icon size (default <code>24</code>)</td></tr><tr><td><code>selectedFontSize</code></td><td>Number</td><td>Selected label font size (default <code>14</code>)</td></tr><tr><td><code>unselectedFontSize</code></td><td>Number</td><td>Unselected label font size (default <code>12</code>)</td></tr><tr><td><code>showSelectedLabels</code></td><td>Boolean</td><td>Show selected label (default <code>true</code>)</td></tr><tr><td><code>showUnselectedLabels</code></td><td>Boolean</td><td>Show unselected labels (default <code>true</code>)</td></tr></tbody></table>
+<p><strong>Per-item props</strong> (in each child’s <code>props</code>):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>icon</code></td><td>String</td><td>Icon name</td></tr><tr><td><code>label</code></td><td>String</td><td>Tab label</td></tr><tr><td><code>activeIcon</code></td><td>String</td><td>Icon name when selected</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Per-item background (shifting type only)</td></tr></tbody></table>
+<p>Each child’s <code>action</code> is executed when that tab is tapped.</p>
+<hr>
+<h3 id="navigationbar">NavigationBar</h3>
+<p>Material 3 bottom navigation bar.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"NavigationBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "selectedIndex"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "backgroundColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#FFFFFF"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "indicatorColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#E3F2FD"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "elevation"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "labelBehavior"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"alwaysShow"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#79B8FF">      "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Destination"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">      "props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"home"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"selectedIcon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"home"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Home"</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#79B8FF">      "action"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/home"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>Bar props:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>selectedIndex</code></td><td>Number</td><td>Initially selected index (default <code>0</code>)</td></tr><tr><td><code>backgroundColor</code></td><td>String/Number</td><td>Bar background color</td></tr><tr><td><code>indicatorColor</code></td><td>String/Number</td><td>Selection indicator color</td></tr><tr><td><code>shadowColor</code></td><td>String/Number</td><td>Shadow color</td></tr><tr><td><code>surfaceTintColor</code></td><td>String/Number</td><td>Surface tint color</td></tr><tr><td><code>elevation</code></td><td>Number</td><td>Shadow depth</td></tr><tr><td><code>height</code></td><td>Number</td><td>Bar height</td></tr><tr><td><code>animationDuration</code></td><td>Number</td><td>Transition duration in milliseconds</td></tr><tr><td><code>labelBehavior</code></td><td>String</td><td><code>alwaysShow</code>, <code>alwaysHide</code>, <code>onlyShowSelected</code></td></tr></tbody></table>
+<p><strong>Per-destination props</strong> (in each child’s <code>props</code>):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>icon</code></td><td>String</td><td>Icon name (unselected)</td></tr><tr><td><code>selectedIcon</code></td><td>String</td><td>Icon name when selected</td></tr><tr><td><code>label</code></td><td>String</td><td>Destination label</td></tr></tbody></table>
+<p>Each child’s <code>action</code> is executed when that destination is tapped.</p>
+<hr>
+<h3 id="defaulttabcontroller">DefaultTabController</h3>
+<p>Provides a <code>TabController</code> to all descendant widgets. Wrap this around a widget tree that contains both a <code>TabBar</code> and a <code>TabBarView</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"DefaultTabController"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "length"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">3</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "initialIndex"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Column"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">      {</span></span>
+<span class="line"><span style="color:#79B8FF">        "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TabBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">          { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab 1"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">          { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab 2"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">          { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab 3"</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">        ]</span></span>
+<span class="line"><span style="color:#E1E4E8">      },</span></span>
+<span class="line"><span style="color:#E1E4E8">      {</span></span>
+<span class="line"><span style="color:#79B8FF">        "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Expanded"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "child"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">          "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TabBarView"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">          "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Page 1"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Page 2"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Page 3"</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">          ]</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    ]</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>length</code></td><td>Number</td><td><strong>Required.</strong> Number of tabs (clamped to 1–999)</td></tr><tr><td><code>initialIndex</code></td><td>Number</td><td>Initially selected tab (default <code>0</code>)</td></tr></tbody></table>
+<hr>
+<h3 id="tabbar">TabBar</h3>
+<p>Row of tabs. Must be a descendant of <code>DefaultTabController</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TabBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "isScrollable"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "labelColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "unselectedLabelColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#757575"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "indicatorColor"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#2196F3"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "indicatorWeight"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2.0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "tabAlignment"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"fill"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Photos"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"image"</span><span style="color:#E1E4E8"> } },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Tab"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"props"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Videos"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"icon"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"camera"</span><span style="color:#E1E4E8"> } }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>isScrollable</code></td><td>Boolean</td><td>Scrollable tabs (default <code>false</code>)</td></tr><tr><td><code>labelColor</code></td><td>String/Number</td><td>Selected tab label/icon color</td></tr><tr><td><code>unselectedLabelColor</code></td><td>String/Number</td><td>Unselected tab color</td></tr><tr><td><code>indicatorColor</code></td><td>String/Number</td><td>Tab indicator color</td></tr><tr><td><code>indicatorWeight</code></td><td>Number</td><td>Indicator height (default <code>2.0</code>, clamped to 0.1+)</td></tr><tr><td><code>dividerColor</code></td><td>String/Number</td><td>Divider line color below the tab bar</td></tr><tr><td><code>padding</code></td><td>Number</td><td>Tab bar padding</td></tr><tr><td><code>tabAlignment</code></td><td>String</td><td><code>start</code>, <code>startOffset</code>, <code>fill</code>, <code>center</code></td></tr></tbody></table>
+<p><strong>Per-tab props</strong> (in each child’s <code>props</code>):</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>text</code></td><td>String</td><td>Tab label</td></tr><tr><td><code>icon</code></td><td>String</td><td>Icon name shown above/beside the label</td></tr></tbody></table>
+<hr>
+<h3 id="tabbarview">TabBarView</h3>
+<p>Page view synced with <code>TabBar</code>. Must be a descendant of <code>DefaultTabController</code>.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"TabBarView"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "physics"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"never"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "children"</span><span style="color:#E1E4E8">: []</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Values</th></tr></thead><tbody><tr><td><code>physics</code></td><td>String</td><td><code>never</code>, <code>bouncing</code>, <code>clamping</code></td></tr></tbody></table>
+<p><code>children</code> — one widget per tab page. Count must match <code>DefaultTabController.length</code>.</p>
+<hr>
+<h2 id="effect-widgets">Effect Widgets</h2>
+<h3 id="visibility">Visibility</h3>
+<p>Show/hide widget.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Visibility"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "visible"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "maintainSize"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "maintainState"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h3 id="opacity">Opacity</h3>
+<p>Transparency control.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Opacity"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "opacity"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">0.5</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "child"</span><span style="color:#E1E4E8">: {}</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>opacity</code></td><td>Number</td><td>0.0–1.0 (clamped)</td></tr></tbody></table>
+<hr>
+<h2 id="actions">Actions</h2>
+<p>Actions define what happens when a user interacts with a widget.</p>
+<h3 id="navigate">Navigate</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/products"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "arguments"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "id"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">123</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="pop">Pop</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"pop"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "result"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"success"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="api-call">API Call</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"api"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "endpoint"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/api/products"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "method"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"POST"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "body"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Product"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "onSuccess"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"showSnackBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "message"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Saved!"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "onError"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"showSnackBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "message"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Failed to save"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="show-dialog">Show Dialog</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"showDialog"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "title"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Confirm"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "message"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Are you sure?"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "confirmText"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Yes"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "cancelText"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"No"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "onConfirm"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"api"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "endpoint"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/api/delete"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="show-snackbar">Show SnackBar</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"showSnackBar"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "message"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Item saved successfully"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "duration"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">3000</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "actionLabel"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Undo"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "action"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"api"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "endpoint"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/api/undo"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="sequence">Sequence</h3>
+<p>Execute multiple actions in order.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"sequence"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "actions"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"showSnackBar"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"message"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Saving..."</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"api"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"endpoint"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/api/save"</span><span style="color:#E1E4E8">},</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span><span style="color:#79B8FF">"type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/success"</span><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="conditional">Conditional</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"conditional"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "condition"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"isAndroid"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "then"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/android-page"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "else"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"navigate"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "route"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/ios-page"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="copy">Copy</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"copy"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text to copy"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "showFeedback"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "feedbackMessage"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Copied!"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="custom">Custom</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"custom"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"myCustomAction"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "params"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "key"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"value"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="conditions">Conditions</h2>
+<p>Conditions control when widgets are rendered.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Condition</th><th>Description</th></tr></thead><tbody><tr><td><code>isAndroid</code></td><td>Android platform</td></tr><tr><td><code>isIOS</code></td><td>iOS platform</td></tr><tr><td><code>isMobile</code></td><td>Android or iOS</td></tr><tr><td><code>isWeb</code></td><td>Web platform</td></tr><tr><td><code>isDesktop</code></td><td>Desktop (Windows, macOS, Linux)</td></tr><tr><td><code>isSmallScreen</code></td><td>Width &#x3C; 600px</td></tr><tr><td><code>isMediumScreen</code></td><td>600px ≤ Width &#x3C; 1200px</td></tr><tr><td><code>isLargeScreen</code></td><td>Width ≥ 1200px</td></tr><tr><td><code>isDarkMode</code></td><td>Dark theme active</td></tr><tr><td><code>isLightMode</code></td><td>Light theme active</td></tr></tbody></table>
+<p><strong>Usage:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Text"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "props"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "text"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Only visible on mobile"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "condition"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"isMobile"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="color-formats">Color Formats</h2>
+<p>Four formats are accepted wherever a color prop appears:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Format</th><th>Example</th><th>Notes</th></tr></thead><tbody><tr><td>Named</td><td><code>"color": "blue"</code></td><td>All Flutter <code>Colors.*</code> names (e.g. <code>red</code>, <code>green</code>, <code>amber</code>)</td></tr><tr><td><code>Colors.x</code></td><td><code>"color": "Colors.deepPurple"</code></td><td>Flutter dot-notation directly</td></tr><tr><td>Hex <code>#RRGGBB</code></td><td><code>"color": "#1976D2"</code></td><td>Standard CSS hex, fully opaque</td></tr><tr><td>Hex <code>#AARRGGBB</code></td><td><code>"color": "#FF1976D2"</code></td><td>With alpha channel</td></tr><tr><td>Integer</td><td><code>"color": 4278190080</code></td><td>Raw Flutter ARGB int (<code>0xFF000000</code>)</td></tr></tbody></table>
+<p><strong>Material shade names</strong> are also supported — append the shade number to the color name:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="plaintext"><code><span class="line"><span>"red50", "red100" … "red900"</span></span>
+<span class="line"><span>"blue50", "blue100" … "blue900"</span></span>
+<span class="line"><span>"deepPurple200", "teal400", "amber700" …</span></span></code></pre>
+<p><strong>CSS color names</strong> (<code>navy</code>, <code>coral</code>, <code>gold</code>, <code>salmon</code>, <code>teal</code>, <code>olive</code>, <code>maroon</code>, <code>violet</code>, <code>indigo</code>, <code>crimson</code>, <code>turquoise</code>, <code>skyblue</code>, <code>hotpink</code>, <code>lime</code>, <code>aqua</code>, <code>fuchsia</code>, <code>silver</code>, <code>gray</code> / <code>grey</code>, …) are recognized as well.</p>
+<p><strong>Common colors quick reference:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Color</th><th>Named</th><th>Hex</th></tr></thead><tbody><tr><td>Black</td><td><code>"black"</code></td><td><code>"#000000"</code></td></tr><tr><td>White</td><td><code>"white"</code></td><td><code>"#FFFFFF"</code></td></tr><tr><td>Red</td><td><code>"red"</code></td><td><code>"#FF0000"</code></td></tr><tr><td>Blue</td><td><code>"blue"</code></td><td><code>"#0000FF"</code></td></tr><tr><td>Green</td><td><code>"green"</code></td><td><code>"#00FF00"</code></td></tr><tr><td>Grey</td><td><code>"grey"</code></td><td><code>"#9E9E9E"</code></td></tr><tr><td>Transparent</td><td><code>"transparent"</code></td><td><code>"#00000000"</code></td></tr></tbody></table>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Keep schemas simple</strong> - Avoid deeply nested structures</li>
+<li><strong>Use conditions sparingly</strong> - Prefer responsive layouts over conditional widgets</li>
+<li><strong>Cache aggressively</strong> - Use <code>cacheDuration</code> for stable content</li>
+<li><strong>Handle errors</strong> - Always provide <code>onError</code> for API actions</li>
+<li><strong>Test on all platforms</strong> - Verify conditions work as expected</li>
+</ol>
+<hr>
+<p><strong>Built with Backend-Driven UI</strong></p> </div> </article> </div>  </main> <footer> <div class="container"> <p>
+Built with care by <a href="https://github.com/Akhilesh002" target="_blank" rel="noopener">Akhilesh</a>
+&nbsp;·&nbsp;
+<a href="https://github.com/igloodev" target="_blank" rel="noopener">igloodev on GitHub</a>
+&nbsp;·&nbsp;
+          MIT License
+</p> </div> </footer> <script type="module">const s=new IntersectionObserver(e=>e.forEach(r=>{r.isIntersecting&&(r.target.classList.add("visible"),s.unobserve(r.target))}),{threshold:.12});document.querySelectorAll(".reveal").forEach(e=>s.observe(e));</script> </body> </html> <script type="module">const t=document.querySelectorAll(".doc-toc-link"),r=Array.from(document.querySelectorAll(".doc-content h2, .doc-content h3")),n=new IntersectionObserver(e=>{e.forEach(c=>{c.isIntersecting&&(t.forEach(o=>o.classList.remove("active")),document.querySelector(`.doc-toc-link[href="#${c.target.id}"]`)?.classList.add("active"))})},{rootMargin:"-10% 0px -80% 0px"});r.forEach(e=>n.observe(e));</script>
